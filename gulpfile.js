@@ -1,77 +1,58 @@
 const gulp = require("gulp");
 const gap = require("gulp-append-prepend");
 
+// Gulp task to prepend license headers to production build files
 gulp.task("licenses", async function () {
-  // this is to add Creative Tim licenses in the production mode for the minified js
+  // Add license header to all JavaScript chunk files in the production build
   gulp
     .src("build/static/js/*chunk.js", { base: "./" })
     .pipe(
       gap.prependText(`/*!
 
 =========================================================
-* Argon Dashboard React - v1.2.2
+* Dashboard React - v1.2.2
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* Licensed under MIT
+* Permission notice shall be included in all copies or substantial portions of the Software.
 
 */`)
     )
     .pipe(gulp.dest("./", { overwrite: true }));
 
-  // this is to add Creative Tim licenses in the production mode for the minified html
+  // Add license header to the main HTML file in the production build
   gulp
     .src("build/index.html", { base: "./" })
     .pipe(
       gap.prependText(`<!--
 
 =========================================================
-* Argon Dashboard React - v1.2.2
+* Dashboard React - v1.2.2
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* Licensed under MIT
+* Permission notice shall be included in all copies or substantial portions of the Software.
 
 -->`)
     )
     .pipe(gulp.dest("./", { overwrite: true }));
 
-  // this is to add Creative Tim licenses in the production mode for the minified css
+  // Add license header to all CSS chunk files in the production build
   gulp
     .src("build/static/css/*chunk.css", { base: "./" })
     .pipe(
       gap.prependText(`/*!
 
 =========================================================
-* Argon Dashboard React - v1.2.2
+* Dashboard React - v1.2.2
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* Licensed under MIT
+* Permission notice shall be included in all copies or substantial portions of the Software.
 
 */`)
     )
     .pipe(gulp.dest("./", { overwrite: true }));
+
   return;
 });
