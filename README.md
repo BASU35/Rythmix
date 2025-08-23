@@ -288,7 +288,7 @@ Rythmix Dashboard requires a backend service for AI processing. Ensure your back
 Customize the dashboard appearance by modifying SCSS variables:
 
 ```scss
-// src/assets/scss/argon-dashboard-react.scss
+// src/assets/scss/Rythmix-dashboard-react.scss
 $primary-color: #5e72e4;    // Primary brand color
 $secondary-color: #f7fafc;   // Secondary color
 $success-color: #2dce89;     // Success states
@@ -487,7 +487,7 @@ copies or substantial portions of the Software.
 - **TensorFlow Team**: For the powerful machine learning framework
 - **React Community**: For the robust frontend framework
 - **Google Cloud**: For reliable cloud infrastructure
-- **Creative Tim**: For the Argon Dashboard React template foundation
+- **Creative Tim**: For the Rythmix Dashboard React template foundation
 - **PhysioNet**: For providing open-access cardiac datasets[18][32]
 - **IIT Guwahati**: For mentorship and competition platform
 - **Healthcare Partners**: For clinical validation and feedback
