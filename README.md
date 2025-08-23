@@ -454,9 +454,9 @@ Based on comprehensive market research, Rythmix addresses strong demand among:
 
 | Role | Name | Contact |
 |------|------|---------|
-| **Lead Developer** | Yaksh Dev | [GitHub](https://github.com/yakshdev) |
-| **Co-Developer** | Divyansh Kumar | [GitHub](https://github.com/divyansh) |
-| **Project Advisor** | IIT Guwahati Faculty | - |
+| **Lead Developer** | Yaksh Dev | [GitHub](https://github.com/yakshdevv) |
+| **Co-Developer** | Divyansh Kumar | [GitHub](https://github.com/BASU35) |
+
 
 ---
 
