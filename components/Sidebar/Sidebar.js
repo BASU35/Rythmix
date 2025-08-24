@@ -1,14 +1,12 @@
 /*!
 
 =========================================================
-* Argon Dashboard React - v1.2.2
+* Dashboard React - v1.2.2
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/argon-dashboard-react
 * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
 
 =========================================================
 
@@ -16,12 +14,13 @@
 
 */
 /*eslint-disable*/
+
 import { useState } from "react";
 import { NavLink as NavLinkRRD, Link } from "react-router-dom";
-// nodejs library to set properties for components
+// Node.js library to validate prop types
 import { PropTypes } from "prop-types";
 
-// reactstrap components
+// Importing UI components from reactstrap
 import {
   Button,
   Card,
@@ -54,21 +53,35 @@ import {
 
 var ps;
 
+// Sidebar Component
+// -----------------
+// This component is responsible for rendering the sidebar navigation.
+// Features include:
+//   - Collapsible navigation for smaller screens
+//   - Dynamic active route highlighting
+//   - Rendering navigation links based on a routes configuration array
+//   - Support for both internal links (using react-router-dom) and external links
+//
+// Current state: Only structure and helper functions exist; the JSX output is empty.
 const Sidebar = (props) => {
   const [collapseOpen, setCollapseOpen] = useState();
-  // verifies if routeName is the one active (in browser input)
+
+  // Checks if the given route is active based on the current pathname
   const activeRoute = (routeName) => {
     return props.location.pathname.indexOf(routeName) > -1 ? "active" : "";
   };
-  // toggles collapse between opened and closed (true/false)
+
+  // Toggles the sidebar collapse state
   const toggleCollapse = () => {
     setCollapseOpen((data) => !data);
   };
-  // closes the collapse
+
+  // Closes the sidebar collapse
   const closeCollapse = () => {
     setCollapseOpen(false);
   };
-  // creates the links that appear in the left menu / Sidebar
+
+  // Generates navigation links from the routes prop
   const createLinks = (routes) => {
     return routes.map((prop, key) => {
       return (
@@ -87,8 +100,11 @@ const Sidebar = (props) => {
     });
   };
 
+  // Extracting props
   const { bgColor, routes, logo } = props;
   let navbarBrandProps;
+
+  // Handling logo link logic
   if (logo && logo.innerLink) {
     navbarBrandProps = {
       to: logo.innerLink,
@@ -102,29 +118,32 @@ const Sidebar = (props) => {
   }
 
   return (
-<></>
+    <>
+      {/* Sidebar layout will be implemented here in future */}
+    </>
   );
 };
 
+// Default props for Sidebar
 Sidebar.defaultProps = {
   routes: [{}]
 };
 
+// Prop type validation for Sidebar
 Sidebar.propTypes = {
-  // links that will be displayed inside the component
+  // Links that will be displayed in the sidebar
   routes: PropTypes.arrayOf(PropTypes.object),
   logo: PropTypes.shape({
-    // innerLink is for links that will direct the user within the app
-    // it will be rendered as <Link to="...">...</Link> tag
+    // innerLink is for navigation within the app (<Link to="...">)
     innerLink: PropTypes.string,
-    // outterLink is for links that will direct the user outside the app
-    // it will be rendered as simple <a href="...">...</a> tag
+    // outterLink is for navigation outside the app (<a href="...">)
     outterLink: PropTypes.string,
-    // the image src of the logo
+    // Logo image source
     imgSrc: PropTypes.string.isRequired,
-    // the alt for the img
+    // Alternative text for the logo
     imgAlt: PropTypes.string.isRequired
   })
 };
 
+// Exporting Sidebar for use across the application
 export default Sidebar;
