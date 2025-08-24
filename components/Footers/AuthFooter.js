@@ -1,7 +1,7 @@
 /*!
 
 =========================================================
-* Argon Dashboard React - v1.2.2
+* Dashboard React - v1.2.2
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/argon-dashboard-react
@@ -9,7 +9,6 @@
 * Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
 
 * Coded by Creative Tim
-
 =========================================================
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
@@ -17,14 +16,24 @@
 */
 /*eslint-disable*/
 
-// reactstrap components
+// Importing components from reactstrap for layout and navigation
 import { NavItem, NavLink, Nav, Container, Row, Col } from "reactstrap";
 
+// Login Component
+// ---------------
+// This is a placeholder for the login page component.
+// It currently returns an empty fragment, but can later
+// be extended to include:
+//   - A login form (email/username, password)
+//   - Social login buttons
+//   - Page layout with branding and styles
 const Login = () => {
   return (
     <>
+      {/* Placeholder for future login UI elements */}
     </>
   );
 };
 
+// Exporting the Login component so it can be used across the application
 export default Login;
